@@ -49,7 +49,7 @@ const Challenges = () => {
   return (
     <div className="p-6 max-w-6xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Quizes</h1>
+        <h1 className="text-3xl font-bold mb-2">Quizzes</h1>
         <p className="text-gray-500 dark:text-gray-400">
           Complete Quizzes to earn points and improve your skills
         </p>
@@ -57,7 +57,7 @@ const Challenges = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-          <h2 className="text-xl font-semibold mb-4">Available Quizes</h2>
+          <h2 className="text-xl font-semibold mb-4">Available Quizzes</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {challenges.map((challenge) => (
               <ChallengeCard
