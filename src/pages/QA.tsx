@@ -28,7 +28,7 @@ const QA = () => {
     },
     {
       id: 3,
-      title: "What are the best places to pick up?",
+      title: "What are the best places to pick up in the metro area?",
       content: "As my application grows, I'm finding it harder to manage state efficiently. Should I use Context API, Redux, or something else? What are the trade-offs?",
       author: { name: "Taylor Wilson", avatarUrl: undefined },
       timestamp: new Date(2025, 3, 30, 15, 45),
