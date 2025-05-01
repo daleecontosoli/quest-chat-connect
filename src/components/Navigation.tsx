@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Award, MessageSquare, HelpCircle, Users } from 'lucide-react';
+import { Award, MessageSquare, HelpCircle, Users, LinkIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navigation = () => {
@@ -22,6 +22,11 @@ const Navigation = () => {
       title: 'Social',
       path: '/social',
       icon: <Users className="h-5 w-5" />
+    },
+    {
+      title: 'Resources',
+      path: '/resources',
+      icon: <LinkIcon className="h-5 w-5" />
     },
     {
       title: 'Q&A',

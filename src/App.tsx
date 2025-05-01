@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Challenges from "./pages/Challenges";
 import Chat from "./pages/Chat";
 import Social from "./pages/Social";
+import Resources from "./pages/Resources";
 import QA from "./pages/QA";
 import Navigation from "./components/Navigation";
 
@@ -28,6 +29,7 @@ const App = () => (
               <Route path="/challenges" element={<Challenges />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/social" element={<Social />} />
+              <Route path="/resources" element={<Resources />} />
               <Route path="/qa" element={<QA />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
