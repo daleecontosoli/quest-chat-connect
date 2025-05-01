@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Award, MessageSquare, HelpCircle, Users, LinkIcon, Video } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import UserProfileNav from './UserProfileNav';
 
 const Navigation = () => {
   const location = useLocation();
@@ -40,6 +40,12 @@ const Navigation = () => {
     }
   ];
 
+  // Mock user data - in a real application, this would come from authentication
+  const currentUser = {
+    name: "John Doe",
+    avatarUrl: undefined
+  };
+
   return (
     <nav className="fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto bg-white dark:bg-gray-900 shadow-lg md:shadow-none border-t md:border-t-0 md:border-r border-gray-200 dark:border-gray-800">
       <div className="flex md:flex-col md:h-screen md:w-64 md:py-8 md:px-4">
@@ -62,6 +68,11 @@ const Navigation = () => {
               <span className="hidden md:block">{item.title}</span>
             </Link>
           ))}
+        </div>
+        
+        {/* User profile component - only visible on desktop */}
+        <div className="hidden md:block mt-auto">
+          <UserProfileNav name={currentUser.name} avatarUrl={currentUser.avatarUrl} />
         </div>
       </div>
     </nav>
