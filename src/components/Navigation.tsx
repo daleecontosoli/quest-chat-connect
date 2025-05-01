@@ -14,7 +14,7 @@ const Navigation = () => {
       icon: <Video className="h-5 w-5" />
     },
     {
-      title: 'Quizes',
+      title: 'Quizzes',
       path: '/challenges',
       icon: <Award className="h-5 w-5" />
     },
