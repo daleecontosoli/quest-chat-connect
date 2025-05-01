@@ -18,7 +18,7 @@ const Circle = () => {
     {
       id: '1',
       name: 'Alex Chen',
-      role: 'Frontend Developer',
+      role: 'General Handyman',
       bio: 'Passionate about UI/UX and creating responsive designs. Currently learning about accessibility.',
       avatarUrl: undefined,
       skills: ['React', 'TypeScript', 'Tailwind CSS']
@@ -26,7 +26,7 @@ const Circle = () => {
     {
       id: '2',
       name: 'Taylor Johnson',
-      role: 'Backend Engineer',
+      role: 'Plumber',
       bio: 'Building scalable APIs and database solutions. Open source contributor.',
       avatarUrl: undefined,
       skills: ['Node.js', 'PostgreSQL', 'GraphQL']
@@ -34,7 +34,7 @@ const Circle = () => {
     {
       id: '3',
       name: 'Samir Patel',
-      role: 'Full Stack Developer',
+      role: 'Rickshaw Driver Extraordinaire',
       bio: 'Experienced in building complete web applications. Love to experiment with new technologies.',
       avatarUrl: undefined,
       skills: ['React', 'Express', 'MongoDB']
@@ -42,7 +42,7 @@ const Circle = () => {
     {
       id: '4',
       name: 'Professor Potato',
-      role: 'Technical Lead',
+      role: 'Circle Lead',
       bio: 'Guiding teams to build great products. Focused on architecture and best practices.',
       avatarUrl: 'https://i.postimg.cc/tJpVNCjD/Chat-GPT-Image-Apr-30-2025-06-34-21-PM.png',
       skills: ['System Design', 'Team Leadership', 'Cloud Architecture']
@@ -50,7 +50,7 @@ const Circle = () => {
     {
       id: '5',
       name: 'Jamie Rodriguez',
-      role: 'DevOps Engineer',
+      role: 'Kitchen Engineer',
       bio: 'Automating everything that can be automated. CI/CD pipeline expert.',
       avatarUrl: undefined,
       skills: ['Docker', 'Kubernetes', 'Terraform']
@@ -58,7 +58,7 @@ const Circle = () => {
     {
       id: '6',
       name: 'Morgan Lee',
-      role: 'UX Designer',
+      role: 'Roof Repair',
       bio: 'Creating intuitive and delightful user experiences. User research enthusiast.',
       avatarUrl: undefined,
       skills: ['Figma', 'User Testing', 'Wireframing']
