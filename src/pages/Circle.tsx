@@ -20,8 +20,7 @@ const Circle = () => {
       name: 'Alex Chen',
       role: 'General Handyman',
       bio: 'Passionate about UI/UX and creating responsive designs. Currently learning about accessibility.',
-      avatarUrl: undefined,
-      skills: ['React', 'TypeScript', 'Tailwind CSS']
+      avatarUrl: undefined
     },
     {
       id: '2',
