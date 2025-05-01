@@ -26,7 +26,7 @@ const Social = () => {
     {
       id: 1,
       content: "Welcome to the Social chat! This is where we can discuss anything not related to challenges.",
-      sender: { name: "Community Manager", avatarUrl: undefined },
+      sender: { name: "Professor Potato", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 8, 30),
       isCurrentUser: false,
       reactions: [
@@ -47,7 +47,7 @@ const Social = () => {
     },
     {
       id: 3,
-      content: "Hey Alex! Welcome to the group. What's your professional background?",
+      content: "Hey Alex! Welcome to the group. What's your background?",
       sender: { name: "Taylor Johnson", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 8, 40),
       isCurrentUser: false,
@@ -55,7 +55,7 @@ const Social = () => {
     },
     {
       id: 4,
-      content: "Hi everyone, just wanted to share this interesting article I found on AI trends.",
+      content: "Hi everyone, just wanted to share this interesting article I found on gig work and AI.",
       sender: { name: "Samir", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 15),
       isCurrentUser: true,
