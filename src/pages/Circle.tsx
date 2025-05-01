@@ -19,7 +19,7 @@ const Circle = () => {
       id: '1',
       name: 'Alex Chen',
       role: 'General Handyman',
-      bio: 'Passionate about UI/UX and creating responsive designs. Currently learning about accessibility.',
+      bio: 'A skilled general handyman providing reliable repair, maintenance, and installation services for homes and businesses.',
       avatarUrl: undefined,
       skills: ['Painting', 'Planting', 'General Handyman']
     },
@@ -27,7 +27,7 @@ const Circle = () => {
       id: '2',
       name: 'Taylor Johnson',
       role: 'Plumber',
-      bio: 'Building scalable APIs and database solutions. Open source contributor.',
+      bio: 'Experienced plumber specializing in residential and commercial plumbing installations, repairs, and maintenance to ensure efficient and reliable water systems.',
       avatarUrl: undefined,
       skills: ['Sinks', 'Bathrooms', 'Water Heaters']
     },
@@ -35,7 +35,7 @@ const Circle = () => {
       id: '3',
       name: 'Samir Patel',
       role: 'Rickshaw Driver Extraordinaire',
-      bio: 'Experienced in building complete web applications. Love to experiment with new technologies.',
+      bio: 'I move people.',
       avatarUrl: undefined,
       skills: ['Bajaj Auto', 'Piaggio', 'Mahindra']
     },
@@ -43,7 +43,7 @@ const Circle = () => {
       id: '4',
       name: 'Professor Potato',
       role: 'Circle Lead',
-      bio: 'Guiding teams to build great products. Focused on architecture and best practices.',
+      bio: 'Your friendly AI who will coach you on your journey.',
       avatarUrl: 'https://i.postimg.cc/tJpVNCjD/Chat-GPT-Image-Apr-30-2025-06-34-21-PM.png',
       skills: ['Finance', 'Discussion Lead', 'Sprouting']
     },
@@ -51,7 +51,7 @@ const Circle = () => {
       id: '5',
       name: 'Jamie Rodriguez',
       role: 'Kitchen Engineer',
-      bio: 'Automating everything that can be automated. CI/CD pipeline expert.',
+      bio: 'Doing more than cooking.',
       avatarUrl: undefined,
       skills: ['Sink', 'Remodeling', 'Cabinets']
     },
@@ -59,7 +59,7 @@ const Circle = () => {
       id: '6',
       name: 'Morgan Lee',
       role: 'Roofer',
-      bio: 'Creating intuitive and delightful user experiences. User research enthusiast.',
+      bio: 'Experienced roofer specializing in the installation, repair, and maintenance of residential and commercial roofing systems to ensure durability and weather resistance.',
       avatarUrl: undefined,
       skills: ['Metal Roofs', 'Solar Install', 'Roof Repair']
     }
