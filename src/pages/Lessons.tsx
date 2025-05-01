@@ -30,7 +30,7 @@ const Lessons = () => {
       title: "Day 1: Small Business Cash Flow Basics",
       description: "Learn the fundamentals of managing cash flow for your small business",
       thumbnailUrl: "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?auto=format&fit=crop&q=80&w=600&h=400",
-      youtubeId: "Dt0DCQ92GXA",
+      youtubeId: "9kKlZQGEOto",
       category: "basics",
       duration: "12:45"
     },
