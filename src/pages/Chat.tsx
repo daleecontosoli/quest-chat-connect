@@ -66,7 +66,7 @@ const Chat = () => {
     },
     {
       id: 5,
-      content: "Done!  Here's a screenshot!",
+      content: "Okay, that worked.  Screenshot:",
       sender: { name: "Samir", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 27),
       isCurrentUser: true,
