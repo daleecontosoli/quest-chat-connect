@@ -10,21 +10,21 @@ const Challenges = () => {
     { 
       id: 1, 
       title: "Electrical Fundamentals", 
-      description: "Test your knowledge of Electrical basics including wiring and building code requirements.", 
+      description: "Test your knowledge of electrical basics including wiring and building code requirements.", 
       points: 100, 
       difficulty: "easy" as const
     },
     { 
       id: 2, 
       title: "Plumbing Repair", 
-      description: "Test your skill on how to detection leaks and repair.", 
+      description: "Test your skill on how to detection leaks and do repairs.", 
       points: 200, 
       difficulty: "medium" as const 
     },
     { 
       id: 3, 
-      title: "Advanced Algorithms", 
-      description: "Solve complex algorithmic challenges focusing on optimization and efficiency.", 
+      title: "HVAC Systems Safety", 
+      description: "Test your skills on refrigerant handling and other safety protocols.", 
       points: 350, 
       difficulty: "hard" as const
     },
