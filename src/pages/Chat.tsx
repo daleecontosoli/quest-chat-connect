@@ -58,7 +58,7 @@ const Chat = () => {
     {
       id: 4, 
       content: "The conversion factor is in cell H2.",
-      sender: { name: "Professor Potato", avatarUrl: undefined },
+      sender: { name: "Professor Potato", avatarUrl: "https://i.postimg.cc/tJpVNCjD/Chat-GPT-Image-Apr-30-2025-06-34-21-PM.png" },
       timestamp: new Date(2025, 4, 1, 9, 22),
       isCurrentUser: false,
       reactions: [
