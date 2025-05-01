@@ -165,11 +165,11 @@ const Lessons = () => {
                     <div>
                       <CardTitle className="text-lg">{video.title}</CardTitle>
                       <CardDescription>{video.description}</CardDescription>
+                      <Button className="whitespace-nowrap">
+                        <FileVideo className="mr-2 h-4 w-4" />
+                        Watch Video
+                      </Button>
                     </div>
-                    <Button className="whitespace-nowrap">
-                      <FileVideo className="mr-2 h-4 w-4" />
-                      Watch Video
-                    </Button>
                   </div>
                 </CardHeader>
               </Card>
