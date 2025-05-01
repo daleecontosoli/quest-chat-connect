@@ -40,31 +40,24 @@ const Chat = () => {
     },
     {
       id: 3,
-      content: "Thanks for the tip! I was struggling with that part.",
-      sender: { name: "Alex Thompson", avatarUrl: undefined },
+      content: "How do I change the conversion from miles to dollars?",
+      sender: { name: "Samir", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 20),
-      isCurrentUser: false
-    },
-    {
-      id: 4, 
-      content: "I'm working on it right now. Anyone have suggestions for handling component state management?",
-      sender: { name: "You", avatarUrl: undefined },
-      timestamp: new Date(2025, 4, 1, 9, 22),
       isCurrentUser: true
     },
     {
-      id: 5,
-      content: "I'd recommend using React hooks for simpler components and context for more complex state sharing. Also, don't forget to memoize components that don't need to re-render frequently!",
-      sender: { name: "Taylor Kim", avatarUrl: undefined },
-      timestamp: new Date(2025, 4, 1, 9, 25),
+      id: 4, 
+      content: "The conversion factor is in cell H2.",
+      sender: { name: "Professor Potato", avatarUrl: undefined },
+      timestamp: new Date(2025, 4, 1, 9, 22),
       isCurrentUser: false
     },
     {
-      id: 6,
-      content: "Here's a diagram that explains component lifecycle:",
-      sender: { name: "Taylor Kim", avatarUrl: undefined },
+      id: 5,
+      content: "Done!  Here's a screenshot!",
+      sender: { name: "Samir", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 27),
-      isCurrentUser: false,
+      isCurrentUser: true,
       imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"
     }
   ];
