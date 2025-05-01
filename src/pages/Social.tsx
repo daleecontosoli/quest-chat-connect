@@ -36,7 +36,7 @@ const Social = () => {
     },
     {
       id: 2,
-      content: "Hello everyone! I'm new here. Looking forward to connecting with you all.",
+      content: "Hello everyone! I need a new portable generator.  At least 8kW.",
       sender: { name: "Alex Chen", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 8, 35),
       isCurrentUser: false,
@@ -47,7 +47,7 @@ const Social = () => {
     },
     {
       id: 3,
-      content: "Hey Alex! Welcome to the group. What's your background?",
+      content: "Hey Alex! I got a Generac GP a few months ago and am pretty happy with it.",
       sender: { name: "Taylor Johnson", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 8, 40),
       isCurrentUser: false,
@@ -55,8 +55,8 @@ const Social = () => {
     },
     {
       id: 4,
-      content: "Hi everyone, just wanted to share this interesting article I found on gig work and AI.",
-      sender: { name: "Samir", avatarUrl: undefined },
+      content: "I tried to use my F150 lightning instead but it didn't hold a big enough charge.",
+      sender: { name: "Samir Patel", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 15),
       isCurrentUser: true,
       imageUrl: "https://images.unsplash.com/photo-1677442135136-760c813028c0?auto=format&fit=crop&w=800&h=500",
