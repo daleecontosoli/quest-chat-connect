@@ -39,7 +39,7 @@ const Challenges = () => {
 
   // Mock data for leaderboard
   const leaderboard = [
-    { id: 1, name: "Sarah Johnson", rank: 1, score: 1250, avatarUrl: undefined },
+    { id: 1, name: "Samir Patel", rank: 1, score: 1250, avatarUrl: "https://i.postimg.cc/Fzxm0hry/samir.jpg" },
     { id: 2, name: "Michael Chen", rank: 2, score: 1120, avatarUrl: undefined },
     { id: 3, name: "Jessica Williams", rank: 3, score: 980, avatarUrl: undefined },
     { id: 4, name: "David Rodriguez", rank: 4, score: 840, avatarUrl: undefined },
