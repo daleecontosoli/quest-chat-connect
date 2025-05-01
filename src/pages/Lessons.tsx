@@ -39,7 +39,7 @@ const Lessons = () => {
       title: "Day 2: Setting Up Your Business Budget",
       description: "A step-by-step guide to creating an effective business budget",
       thumbnailUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21ed6c?auto=format&fit=crop&q=80&w=600&h=400",
-      youtubeId: "pJNsAQjijUs",
+      youtubeId: "P01e-SYxRts",
       category: "basics",
       duration: "15:20"
     },
@@ -48,7 +48,7 @@ const Lessons = () => {
       title: "Day 3: Tax Planning for Small Businesses",
       description: "Essential tax strategies to minimize liabilities for small business owners",
       thumbnailUrl: "https://images.unsplash.com/photo-1586486855514-8c631ae88ee8?auto=format&fit=crop&q=80&w=600&h=400",
-      youtubeId: "dR-QzeYjNzY",
+      youtubeId: "Rz0l57A2iEk",
       category: "basics",
       duration: "18:10"
     },
@@ -57,7 +57,7 @@ const Lessons = () => {
       title: "Day 4: Investment Strategies for Business Growth",
       description: "Learn how to reinvest profits for sustainable business growth",
       thumbnailUrl: "https://images.unsplash.com/photo-1589666564459-93cdd3ab856c?auto=format&fit=crop&q=80&w=600&h=400",
-      youtubeId: "PHe0bXAIuk0",
+      youtubeId: "16OTs9Tql7Y",
       category: "advanced",
       duration: "22:35"
     },
@@ -66,7 +66,7 @@ const Lessons = () => {
       title: "Day 5: Managing Business Credit",
       description: "How to build and leverage business credit effectively",
       thumbnailUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=600&h=400",
-      youtubeId: "E6_zqGxKFGk",
+      youtubeId: "ZzvPj-ovscc",
       category: "advanced",
       duration: "14:55"
     },
@@ -75,7 +75,7 @@ const Lessons = () => {
       title: "Day 6: Financial Risk Management",
       description: "Identifying and mitigating financial risks in your small business",
       thumbnailUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600&h=400",
-      youtubeId: "wu2FC3YxwfI",
+      youtubeId: "HPjovDPbdQM",
       category: "advanced",
       duration: "20:15"
     },
@@ -84,7 +84,7 @@ const Lessons = () => {
       title: "Day 7: Profit First Methodology",
       description: "Implementing the Profit First system in your business finances",
       thumbnailUrl: "https://images.unsplash.com/photo-1607863680198-23b434e6d8b4?auto=format&fit=crop&q=80&w=600&h=400",
-      youtubeId: "FCOYHcQ4fUI",
+      youtubeId: "tmQSc4pPs-Y",
       category: "strategies",
       duration: "25:30"
     },
@@ -93,7 +93,7 @@ const Lessons = () => {
       title: "Day 8: Financial Forecasting for Small Businesses",
       description: "How to create realistic financial projections for your business",
       thumbnailUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600&h=400",
-      youtubeId: "RXfUhE3zBn8",
+      youtubeId: "eJCTz7Ke_Tc",
       category: "strategies",
       duration: "19:45"
     }
