@@ -50,7 +50,6 @@ const Navigation = () => {
     <nav className="fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto bg-white dark:bg-gray-900 shadow-lg md:shadow-none border-t md:border-t-0 md:border-r border-gray-200 dark:border-gray-800">
       <div className="flex md:flex-col md:h-screen md:w-64 md:py-8 md:px-4">
         <div className="hidden md:flex items-center gap-3 px-4 mb-8">
-          <div className="w-8 h-8 bg-linkedin-500 rounded-md flex items-center justify-center text-white font-bold">LLC</div>
           <img src="https://i.postimg.cc/9QL5Wx0f/Chat-GPT-Image-Apr-30-2025-07-03-19-PM.png"></img>
         </div>
         
