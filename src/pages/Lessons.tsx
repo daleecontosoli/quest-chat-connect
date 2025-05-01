@@ -125,15 +125,17 @@ const Lessons = () => {
               </div>
             </div>
             <CardHeader className="pb-2">
-              <CardTitle className="text-xl">{videos[0].title}</CardTitle>
-              <CardDescription>{videos[0].description}</CardDescription>
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <CardTitle className="text-xl">{videos[0].title}</CardTitle>
+                  <CardDescription>{videos[0].description}</CardDescription>
+                </div>
+                <Button className="whitespace-nowrap">
+                  <FileVideo className="mr-2 h-4 w-4" />
+                  Watch Today's Video
+                </Button>
+              </div>
             </CardHeader>
-            <CardContent className="pb-6">
-              <Button className="w-full">
-                <FileVideo className="mr-2 h-4 w-4" />
-                Watch Today's Video
-              </Button>
-            </CardContent>
           </Card>
         </div>
 
@@ -159,15 +161,17 @@ const Lessons = () => {
                   </div>
                 </div>
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">{video.title}</CardTitle>
-                  <CardDescription>{video.description}</CardDescription>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div>
+                      <CardTitle className="text-lg">{video.title}</CardTitle>
+                      <CardDescription>{video.description}</CardDescription>
+                    </div>
+                    <Button className="whitespace-nowrap">
+                      <FileVideo className="mr-2 h-4 w-4" />
+                      Watch Video
+                    </Button>
+                  </div>
                 </CardHeader>
-                <CardContent>
-                  <Button className="w-full">
-                    <FileVideo className="mr-2 h-4 w-4" />
-                    Watch Video
-                  </Button>
-                </CardContent>
               </Card>
             ))}
           </div>
