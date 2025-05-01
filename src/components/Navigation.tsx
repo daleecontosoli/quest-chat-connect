@@ -30,7 +30,7 @@ const Navigation = () => {
       <div className="flex md:flex-col md:h-screen md:w-64 md:py-8 md:px-4">
         <div className="hidden md:flex items-center gap-3 px-4 mb-8">
           <div className="w-8 h-8 bg-linkedin-500 rounded-md flex items-center justify-center text-white font-bold">L</div>
-          <h1 className="font-bold text-lg">LearnTogether</h1>
+          <h1 className="font-bold text-lg">LinkedIn AI Learning Circle</h1>
         </div>
         
         <div className="flex justify-around md:flex-col w-full md:space-y-2">
