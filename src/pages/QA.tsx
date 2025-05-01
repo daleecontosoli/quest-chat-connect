@@ -11,8 +11,8 @@ const QA = () => {
     {
       id: 1,
       title: "How do you handle clients who question your rates?",
-      content: "I'm building a complex dashboard with multiple components and notices that the performance degrades as I add more elements. What are the best practices for optimizing React rendering performance?",
-      author: { name: "Alex Reynolds", avatarUrl: undefined },
+      content: "Some of my clients think my rates are too high, but I'm barely breaking even. How do I handle this?",
+      author: { name: "Samir Patel", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 8, 30),
       answersCount: 4,
       voteCount: 12
