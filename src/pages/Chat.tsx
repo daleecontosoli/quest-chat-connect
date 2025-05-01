@@ -40,7 +40,7 @@ const Chat = () => {
       sender: { name: "Jamie Rodriguez", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 18),
       isCurrentUser: false,
-      imageUrl: "https://placehold.co/600x400",
+      imageUrl: "https://dummyimage.com/600x400/eeeeee/000000.png&text=Spreadsheet+Placeholder",
       reactions: [
         { emoji: '👍', count: 1, users: ['User1'] },
         { emoji: '✅', count: 2, users: ['User2', 'User3'] }
