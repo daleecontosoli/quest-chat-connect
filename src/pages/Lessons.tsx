@@ -1,9 +1,8 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { DollarSign, FileVideo, BookOpen } from "lucide-react";
+import { FileVideo, Star } from "lucide-react";
 
 interface VideoItem {
   id: string;
@@ -16,8 +15,6 @@ interface VideoItem {
 }
 
 const Lessons = () => {
-  const [activeCategory, setActiveCategory] = useState<string>("basics");
-  
   const videos: VideoItem[] = [
     {
       id: "1",
@@ -101,9 +98,6 @@ const Lessons = () => {
       duration: "17:20"
     }
   ];
-  
-  // Filter videos based on active category
-  const filteredVideos = videos.filter(video => video.category === activeCategory);
 
   return (
     <div className="container py-8">
@@ -113,56 +107,71 @@ const Lessons = () => {
           <p className="text-muted-foreground">Video tutorials to help your small business thrive financially</p>
         </div>
 
-        <Tabs defaultValue="basics" onValueChange={setActiveCategory} className="space-y-4">
-          <TabsList>
-            <TabsTrigger value="basics">
-              <DollarSign className="mr-2 h-4 w-4" />
-              <span className="hidden sm:inline">Financial Basics</span>
-              <span className="sm:hidden">Basics</span>
-            </TabsTrigger>
-            <TabsTrigger value="advanced">
-              <BookOpen className="mr-2 h-4 w-4" />
-              <span className="hidden sm:inline">Advanced Topics</span>
-              <span className="sm:hidden">Advanced</span>
-            </TabsTrigger>
-            <TabsTrigger value="strategies">
-              <FileVideo className="mr-2 h-4 w-4" />
-              <span className="hidden sm:inline">Strategic Planning</span>
-              <span className="sm:hidden">Strategy</span>
-            </TabsTrigger>
-          </TabsList>
-
-          {["basics", "advanced", "strategies"].map((category) => (
-            <TabsContent key={category} value={category} className="mt-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredVideos.map((video) => (
-                  <Card key={video.id} className="overflow-hidden transition-all hover:shadow-lg">
-                    <div className="relative">
-                      <img 
-                        src={video.thumbnailUrl}
-                        alt={video.title}
-                        className="w-full h-48 object-cover"
-                      />
-                      <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                        {video.duration}
-                      </div>
-                    </div>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-lg">{video.title}</CardTitle>
-                      <CardDescription>{video.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <Button className="w-full">
-                        <FileVideo className="mr-2 h-4 w-4" />
-                        Watch Video
-                      </Button>
-                    </CardContent>
-                  </Card>
-                ))}
+        {/* Today's Featured Video */}
+        <div className="mb-6">
+          <h2 className="text-xl font-semibold mb-4 flex items-center">
+            <Star className="mr-2 h-5 w-5 text-yellow-500" />
+            Today's Video
+          </h2>
+          <Card className="overflow-hidden transition-all hover:shadow-lg border-2 border-primary">
+            <div className="relative">
+              <img 
+                src={videos[0].thumbnailUrl}
+                alt={videos[0].title}
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                {videos[0].duration}
               </div>
-            </TabsContent>
-          ))}
-        </Tabs>
+            </div>
+            <CardHeader className="pb-2">
+              <CardTitle className="text-xl">{videos[0].title}</CardTitle>
+              <CardDescription>{videos[0].description}</CardDescription>
+            </CardHeader>
+            <CardContent className="pb-6">
+              <Button className="w-full">
+                <FileVideo className="mr-2 h-4 w-4" />
+                Watch Today's Video
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* All Videos */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">All Lessons</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {videos.slice(1).map((video) => (
+              <Card key={video.id} className="overflow-hidden transition-all hover:shadow-lg">
+                <div className="relative">
+                  <img 
+                    src={video.thumbnailUrl}
+                    alt={video.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                    {video.duration}
+                  </div>
+                  <div className="absolute top-2 right-2 bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded-full">
+                    {video.category === 'basics' ? 'Basics' : 
+                     video.category === 'advanced' ? 'Advanced' : 
+                     'Strategy'}
+                  </div>
+                </div>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">{video.title}</CardTitle>
+                  <CardDescription>{video.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button className="w-full">
+                    <FileVideo className="mr-2 h-4 w-4" />
+                    Watch Video
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
