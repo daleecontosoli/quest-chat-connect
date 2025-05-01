@@ -24,6 +24,7 @@ interface ChatMessageProps {
   imageUrl?: string;
   reactions?: EmojiReaction[];
   onAddReaction?: (messageId: number, emoji: string) => void;
+  isSponsored?: boolean;
 }
 
 const ChatMessage = ({ 
@@ -34,21 +35,44 @@ const ChatMessage = ({
   isCurrentUser = false, 
   imageUrl,
   reactions = [],
-  onAddReaction
+  onAddReaction,
+  isSponsored = false
 }: ChatMessageProps) => {
   return (
     <div className={`flex gap-3 mb-4 ${isCurrentUser ? 'flex-row-reverse' : ''}`}>
       <div className="flex-shrink-0">
         <UserAvatar name={sender.name} src={sender.avatarUrl} size="sm" />
       </div>
-      <div className={`max-w-[75%] ${isCurrentUser ? 'bg-linkedin-500 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200'} rounded-2xl p-3 relative group`}>
+      <div className={cn(
+        "max-w-[75%] rounded-2xl p-3 relative group",
+        isSponsored ? "bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800" : 
+        isCurrentUser ? "bg-linkedin-500 text-white" : "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+      )}>
         <div className="flex items-center mb-1">
-          {!isCurrentUser && <span className="font-medium text-sm">{sender.name}</span>}
-          <span className={`text-xs ${isCurrentUser ? 'text-linkedin-100' : 'text-gray-500 dark:text-gray-400'} ml-2`}>
+          {!isCurrentUser && (
+            <>
+              <span className="font-medium text-sm">{sender.name}</span>
+              {isSponsored && (
+                <span className="ml-2 text-xs bg-yellow-200 dark:bg-yellow-800 text-yellow-800 dark:text-yellow-200 px-1.5 py-0.5 rounded-full">
+                  Ad
+                </span>
+              )}
+            </>
+          )}
+          <span className={cn(
+            "text-xs ml-2",
+            isSponsored ? "text-yellow-700 dark:text-yellow-300" :
+            isCurrentUser ? "text-linkedin-100" : "text-gray-500 dark:text-gray-400"
+          )}>
             {formatDistanceToNow(timestamp, { addSuffix: true })}
           </span>
         </div>
-        <p className="text-sm whitespace-pre-line">{content}</p>
+        <p className={cn(
+          "text-sm whitespace-pre-line",
+          isSponsored ? "text-yellow-900 dark:text-yellow-100" : ""
+        )}>
+          {content}
+        </p>
         {imageUrl && (
           <div className="mt-2 rounded-lg overflow-hidden">
             <img 
@@ -81,9 +105,11 @@ const ChatMessage = ({
         )}
         
         {/* Emoji reaction picker */}
-        <div className={`absolute ${isCurrentUser ? 'left-2' : 'right-2'} -bottom-3 opacity-0 group-hover:opacity-100 transition-opacity`}>
-          <EmojiPicker onEmojiSelect={(emoji) => onAddReaction?.(id, emoji)} />
-        </div>
+        {!isSponsored && (
+          <div className={`absolute ${isCurrentUser ? 'left-2' : 'right-2'} -bottom-3 opacity-0 group-hover:opacity-100 transition-opacity`}>
+            <EmojiPicker onEmojiSelect={(emoji) => onAddReaction?.(id, emoji)} />
+          </div>
+        )}
       </div>
     </div>
   );

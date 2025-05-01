@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import ChatMessage, { EmojiReaction } from '@/components/ChatMessage';
 import { Input } from '@/components/ui/input';
@@ -13,6 +14,7 @@ interface Message {
   isCurrentUser: boolean;
   imageUrl?: string;
   reactions: EmojiReaction[];
+  isSponsored?: boolean;
 }
 
 const Social = () => {
@@ -63,6 +65,15 @@ const Social = () => {
         { emoji: '👍', count: 3, users: ['User1', 'User2', 'User3'] },
         { emoji: '🔥', count: 2, users: ['User4', 'User5'] }
       ]
+    },
+    {
+      id: 5,
+      content: "Looking for reliable power during outages? The Generac GP8000E portable generator delivers 8,000 starting watts and 6,500 running watts - perfect for home backup! Features include: electric start, 7.9-gallon fuel tank for 11 hours of run time, and low-oil shutdown. Available now at authorized dealers.",
+      sender: { name: "Sponsored", avatarUrl: "https://i.postimg.cc/J0gL1jHv/generac-logo.png" },
+      timestamp: new Date(2025, 4, 1, 10, 0),
+      isCurrentUser: false,
+      reactions: [],
+      isSponsored: true
     }
   ];
 
@@ -206,6 +217,7 @@ const Social = () => {
               imageUrl={msg.imageUrl}
               reactions={msg.reactions}
               onAddReaction={handleAddReaction}
+              isSponsored={msg.isSponsored}
             />
           ))}
         </div>
