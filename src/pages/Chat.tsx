@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import ChatMessage from '@/components/ChatMessage';
+import ChatMessage, { EmojiReaction } from '@/components/ChatMessage';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Send, Image } from 'lucide-react';
@@ -13,6 +12,7 @@ interface Message {
   timestamp: Date;
   isCurrentUser: boolean;
   imageUrl?: string;
+  reactions: EmojiReaction[];
 }
 
 const Chat = () => {
@@ -28,7 +28,11 @@ const Chat = () => {
       content: "Hey everyone! Today's daily challenge is to track your mileage on your expense spreadsheet.  Post a screenshot to score 5 points!",
       sender: { name: "Professor Potato", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 15),
-      isCurrentUser: false
+      isCurrentUser: false,
+      reactions: [
+        { emoji: '👍', count: 3, users: ['User1', 'User2', 'User3'] },
+        { emoji: '❤️', count: 2, users: ['User4', 'User5'] }
+      ]
     },
     {
       id: 2,
@@ -36,21 +40,29 @@ const Chat = () => {
       sender: { name: "Jamie Rodriguez", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 18),
       isCurrentUser: false,
-      imageUrl: "https://placehold.co/600x400"
+      imageUrl: "https://placehold.co/600x400",
+      reactions: [
+        { emoji: '👍', count: 1, users: ['User1'] },
+        { emoji: '✅', count: 2, users: ['User2', 'User3'] }
+      ]
     },
     {
       id: 3,
       content: "How do I change the conversion from miles to dollars?",
       sender: { name: "Samir", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 20),
-      isCurrentUser: true
+      isCurrentUser: true,
+      reactions: []
     },
     {
       id: 4, 
       content: "The conversion factor is in cell H2.",
       sender: { name: "Professor Potato", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 22),
-      isCurrentUser: false
+      isCurrentUser: false,
+      reactions: [
+        { emoji: '🙏', count: 1, users: ['Samir'] }
+      ]
     },
     {
       id: 5,
@@ -58,7 +70,8 @@ const Chat = () => {
       sender: { name: "Samir", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 27),
       isCurrentUser: true,
-      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"
+      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500",
+      reactions: []
     }
   ];
 
@@ -112,13 +125,76 @@ const Chat = () => {
           sender: { name: "You", avatarUrl: undefined },
           timestamp: new Date(),
           isCurrentUser: true,
-          imageUrl: imagePreview || undefined
+          imageUrl: imagePreview || undefined,
+          reactions: []
         }
       ]);
       setMessage('');
       setSelectedImage(null);
       setImagePreview(null);
     }
+  };
+
+  const handleAddReaction = (messageId: number, emoji: string) => {
+    setMessages(prevMessages => 
+      prevMessages.map(msg => {
+        if (msg.id === messageId) {
+          // Check if this emoji reaction already exists
+          const existingReactionIndex = msg.reactions.findIndex(r => r.emoji === emoji);
+          
+          if (existingReactionIndex > -1) {
+            // If the reaction exists and the current user has already reacted, remove their reaction
+            const existingUsers = msg.reactions[existingReactionIndex].users;
+            const currentUser = "You"; // In a real app, this would be the actual user ID
+            
+            if (existingUsers.includes(currentUser)) {
+              // User already reacted with this emoji, so remove their reaction
+              const updatedUsers = existingUsers.filter(user => user !== currentUser);
+              
+              // If there are no more users for this reaction, remove it entirely
+              if (updatedUsers.length === 0) {
+                return {
+                  ...msg,
+                  reactions: msg.reactions.filter(r => r.emoji !== emoji)
+                };
+              }
+              
+              // Otherwise update the users and count
+              return {
+                ...msg,
+                reactions: msg.reactions.map(r => 
+                  r.emoji === emoji ? { ...r, users: updatedUsers, count: updatedUsers.length } : r
+                )
+              };
+            } else {
+              // User hasn't reacted with this emoji, so add their reaction
+              return {
+                ...msg,
+                reactions: msg.reactions.map(r => 
+                  r.emoji === emoji 
+                    ? { ...r, users: [...r.users, currentUser], count: r.count + 1 } 
+                    : r
+                )
+              };
+            }
+          } else {
+            // This emoji reaction doesn't exist yet, so add it
+            return {
+              ...msg,
+              reactions: [
+                ...msg.reactions,
+                { emoji, count: 1, users: ["You"] }
+              ]
+            };
+          }
+        }
+        return msg;
+      })
+    );
+    
+    toast({
+      description: "Reaction added",
+    });
   };
 
   return (
@@ -131,11 +207,14 @@ const Chat = () => {
           {messages.map((msg) => (
             <ChatMessage
               key={msg.id}
+              id={msg.id}
               content={msg.content}
               sender={msg.sender}
               timestamp={msg.timestamp}
               isCurrentUser={msg.isCurrentUser}
               imageUrl={msg.imageUrl}
+              reactions={msg.reactions}
+              onAddReaction={handleAddReaction}
             />
           ))}
         </div>
