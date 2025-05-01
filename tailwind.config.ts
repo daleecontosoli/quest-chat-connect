@@ -66,6 +66,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				linkedin: {
+					50: '#e6f2f9',
+					100: '#cce5f4',
+					200: '#99cae9',
+					300: '#66b0de',
+					400: '#3395d3',
+					500: '#0077b5', // Main LinkedIn blue
+					600: '#005e93',
+					700: '#00476e',
+					800: '#002f49',
+					900: '#001824',
+				},
 				purple: {
 					50: '#f5f3ff',
 					100: '#ede9fe',
