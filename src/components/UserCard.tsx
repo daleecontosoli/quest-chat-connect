@@ -33,7 +33,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
         <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{user.bio}</p>
       </CardContent>
       <CardFooter className="flex flex-wrap gap-1 pt-0">
-        {user.skills.map((skill, index) => (
+        {user.skills && user.skills.map((skill, index) => (
           <Badge key={index} variant="secondary" className="bg-purple-100 text-purple-700 hover:bg-purple-200">
             {skill}
           </Badge>
