@@ -19,8 +19,8 @@ const QA = () => {
     },
     {
       id: 2,
-      title: "Understanding async/await vs Promises",
-      content: "I'm confused about when to use async/await versus regular Promises. What are the advantages of each approach and when should I prefer one over the other?",
+      title: "How do I find allowable deductions?",
+      content: "I'm confused about when it's ok to deduct expenses like fuel consumption - can I include this as a business expense?",
       author: { name: "Jamie Smith", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 7, 15),
       answersCount: 6,
@@ -28,7 +28,7 @@ const QA = () => {
     },
     {
       id: 3,
-      title: "Best practices for state management in large applications",
+      title: "What are the best places to pick up?",
       content: "As my application grows, I'm finding it harder to manage state efficiently. Should I use Context API, Redux, or something else? What are the trade-offs?",
       author: { name: "Taylor Wilson", avatarUrl: undefined },
       timestamp: new Date(2025, 3, 30, 15, 45),
