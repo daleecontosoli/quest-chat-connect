@@ -36,7 +36,7 @@ const Circle = () => {
       name: 'Samir Patel',
       role: 'Rickshaw Driver Extraordinaire',
       bio: 'I move people.',
-      avatarUrl: undefined,
+      avatarUrl: "https://i.postimg.cc/Fzxm0hry/samir.jpg",
       skills: ['Bajaj Auto', 'Piaggio', 'Mahindra']
     },
     {
