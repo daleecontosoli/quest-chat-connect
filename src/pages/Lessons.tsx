@@ -18,10 +18,10 @@ const Lessons = () => {
   const videos: VideoItem[] = [
     {
       id: "1",
-      title: "Today's lesson: Building Financial Resilience",
-      description: "Strategies to strengthen your business against economic downturns",
-      thumbnailUrl: "https://images.unsplash.com/photo-1664575599736-c5197c684128?auto=format&fit=crop&q=80&w=600&h=400",
-      youtubeId: "J2X5mJ3HDYE",
+      title: "Today's lesson: Navigating Financial Challenges As A Freelancer or Gig Worker",
+      description: "The nature of gig work raises concerns about job security, benefits, working conditions, its impact on traditional employment sectors, and the regulatory landscape. These challenges highlight the complex dynamics at play in the gig economy and the need for thoughtful solutions to ensure it benefits all participants.",
+      thumbnailUrl: "https://i.ytimg.com/vi/pR2sRf2X2PM/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD1QZ2WxLggS_c0yPbhcePebJXr3Q",
+      youtubeId: "pR2sRf2X2PM",
       category: "strategies",
       duration: "17:20"
     },
