@@ -9,8 +9,8 @@ const Challenges = () => {
   const challenges = [
     { 
       id: 1, 
-      title: "JavaScript Fundamentals", 
-      description: "Test your knowledge of JavaScript basics including variables, functions, and control flow.", 
+      title: "Electrical Fundamentals", 
+      description: "Test your knowledge of Electrical basics including wiring and building code requirements.", 
       points: 100, 
       difficulty: "easy" as const
     },
