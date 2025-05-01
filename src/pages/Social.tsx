@@ -58,7 +58,7 @@ const Social = () => {
     {
       id: 4,
       content: "I tried to use my F150 lightning instead but it didn't hold a big enough charge.",
-      sender: { name: "Samir Patel", avatarUrl: undefined },
+      sender: { name: "Samir Patel", avatarUrl: "https://i.postimg.cc/Fzxm0hry/samir.jpg" },
       timestamp: new Date(2025, 4, 1, 9, 15),
       isCurrentUser: true,
       reactions: [
