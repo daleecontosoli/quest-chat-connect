@@ -1,13 +1,18 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Award, MessageSquare, HelpCircle, Users, LinkIcon } from 'lucide-react';
+import { Award, MessageSquare, HelpCircle, Users, LinkIcon, Video } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navigation = () => {
   const location = useLocation();
   
   const navItems = [
+    {
+      title: 'Lessons',
+      path: '/lessons',
+      icon: <Video className="h-5 w-5" />
+    },
     {
       title: 'Challenges',
       path: '/challenges',

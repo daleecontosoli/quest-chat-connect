@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Lessons from "./pages/Lessons";
 import Challenges from "./pages/Challenges";
 import Chat from "./pages/Chat";
 import Social from "./pages/Social";
@@ -26,6 +27,7 @@ const App = () => (
           <main className="flex-1 md:ml-64 pb-16 md:pb-0">
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/lessons" element={<Lessons />} />
               <Route path="/challenges" element={<Challenges />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/social" element={<Social />} />
