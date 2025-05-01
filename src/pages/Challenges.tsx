@@ -30,8 +30,8 @@ const Challenges = () => {
     },
     { 
       id: 4, 
-      title: "API Integration", 
-      description: "Build a small application that connects to external APIs and processes data.", 
+      title: "Roof Repair", 
+      description: "Test your skills on selecting the proper materials for roof repair.", 
       points: 250, 
       difficulty: "medium" as const
     },
