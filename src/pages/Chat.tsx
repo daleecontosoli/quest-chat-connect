@@ -71,7 +71,7 @@ const Chat = () => {
       sender: { name: "Samir Patel", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 27),
       isCurrentUser: true,
-      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500",
+      imageUrl: "https://i.postimg.cc/15gyY13K/Chat-GPT-Image-Apr-30-2025-06-52-11-PM.png",
       reactions: []
     }
   ];
