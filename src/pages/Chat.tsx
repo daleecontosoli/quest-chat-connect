@@ -3,13 +3,26 @@ import React, { useState } from 'react';
 import ChatMessage from '@/components/ChatMessage';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Send } from 'lucide-react';
+import { Send, Image } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
+
+interface Message {
+  id: number;
+  content: string;
+  sender: { name: string; avatarUrl?: string };
+  timestamp: Date;
+  isCurrentUser: boolean;
+  imageUrl?: string;
+}
 
 const Chat = () => {
   const [message, setMessage] = useState('');
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const { toast } = useToast();
   
   // Mock data for messages
-  const initialMessages = [
+  const initialMessages: Message[] = [
     {
       id: 1,
       content: "Hey everyone! Has anyone completed the React Component Design challenge?",
@@ -44,25 +57,73 @@ const Chat = () => {
       sender: { name: "Taylor Kim", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 25),
       isCurrentUser: false
+    },
+    {
+      id: 6,
+      content: "Here's a diagram that explains component lifecycle:",
+      sender: { name: "Taylor Kim", avatarUrl: undefined },
+      timestamp: new Date(2025, 4, 1, 9, 27),
+      isCurrentUser: false,
+      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"
     }
   ];
 
-  const [messages, setMessages] = useState(initialMessages);
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
+
+  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      const validImageTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+      
+      if (!validImageTypes.includes(file.type)) {
+        toast({
+          title: "Invalid file type",
+          description: "Please select an image file (JPEG, PNG, GIF, WEBP)",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      if (file.size > 5 * 1024 * 1024) {
+        toast({
+          title: "File too large",
+          description: "Image must be less than 5MB",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      setSelectedImage(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleCancelImage = () => {
+    setSelectedImage(null);
+    setImagePreview(null);
+  };
 
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
-    if (message.trim()) {
+    if (message.trim() || selectedImage) {
       setMessages([
         ...messages,
         {
           id: messages.length + 1,
-          content: message,
+          content: message.trim(),
           sender: { name: "You", avatarUrl: undefined },
           timestamp: new Date(),
-          isCurrentUser: true
+          isCurrentUser: true,
+          imageUrl: imagePreview || undefined
         }
       ]);
       setMessage('');
+      setSelectedImage(null);
+      setImagePreview(null);
     }
   };
 
@@ -80,11 +141,29 @@ const Chat = () => {
               sender={msg.sender}
               timestamp={msg.timestamp}
               isCurrentUser={msg.isCurrentUser}
+              imageUrl={msg.imageUrl}
             />
           ))}
         </div>
       </div>
       <div className="p-4 border-t bg-white dark:bg-gray-900">
+        {imagePreview && (
+          <div className="max-w-3xl mx-auto mb-2 relative">
+            <div className="relative inline-block">
+              <img 
+                src={imagePreview} 
+                alt="Preview" 
+                className="h-20 w-auto rounded-md object-cover border border-gray-300"
+              />
+              <button 
+                onClick={handleCancelImage}
+                className="absolute -top-2 -right-2 bg-gray-900 text-white rounded-full w-5 h-5 flex items-center justify-center"
+              >
+                ×
+              </button>
+            </div>
+          </div>
+        )}
         <form onSubmit={handleSendMessage} className="max-w-3xl mx-auto flex gap-2">
           <Input
             value={message}
@@ -92,6 +171,19 @@ const Chat = () => {
             placeholder="Type your message..."
             className="flex-1"
           />
+          <div className="relative">
+            <input
+              type="file"
+              id="imageUpload"
+              accept="image/*"
+              onChange={handleImageSelect}
+              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+              aria-label="Upload image"
+            />
+            <Button type="button" variant="outline" size="icon" className="relative">
+              <Image className="h-4 w-4" />
+            </Button>
+          </div>
           <Button type="submit" size="icon">
             <Send className="h-4 w-4" />
           </Button>
