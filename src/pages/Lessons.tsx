@@ -21,7 +21,7 @@ const Lessons = () => {
   const videos: VideoItem[] = [
     {
       id: "1",
-      title: "Small Business Cash Flow Basics",
+      title: "Day 1: Small Business Cash Flow Basics",
       description: "Learn the fundamentals of managing cash flow for your small business",
       thumbnailUrl: "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?auto=format&fit=crop&q=80&w=600&h=400",
       videoUrl: "https://example.com/video1",
@@ -30,7 +30,7 @@ const Lessons = () => {
     },
     {
       id: "2",
-      title: "Setting Up Your Business Budget",
+      title: "Day 2: Setting Up Your Business Budget",
       description: "A step-by-step guide to creating an effective business budget",
       thumbnailUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21ed6c?auto=format&fit=crop&q=80&w=600&h=400",
       videoUrl: "https://example.com/video2",
@@ -39,7 +39,7 @@ const Lessons = () => {
     },
     {
       id: "3",
-      title: "Tax Planning for Small Businesses",
+      title: "Day 3: Tax Planning for Small Businesses",
       description: "Essential tax strategies to minimize liabilities for small business owners",
       thumbnailUrl: "https://images.unsplash.com/photo-1586486855514-8c631ae88ee8?auto=format&fit=crop&q=80&w=600&h=400",
       videoUrl: "https://example.com/video3",
@@ -48,7 +48,7 @@ const Lessons = () => {
     },
     {
       id: "4",
-      title: "Investment Strategies for Business Growth",
+      title: "Day 4: Investment Strategies for Business Growth",
       description: "Learn how to reinvest profits for sustainable business growth",
       thumbnailUrl: "https://images.unsplash.com/photo-1589666564459-93cdd3ab856c?auto=format&fit=crop&q=80&w=600&h=400",
       videoUrl: "https://example.com/video4",
@@ -57,7 +57,7 @@ const Lessons = () => {
     },
     {
       id: "5",
-      title: "Managing Business Credit",
+      title: "Day 5: Managing Business Credit",
       description: "How to build and leverage business credit effectively",
       thumbnailUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=600&h=400",
       videoUrl: "https://example.com/video5",
@@ -66,7 +66,7 @@ const Lessons = () => {
     },
     {
       id: "6",
-      title: "Financial Risk Management",
+      title: "Day 6: Financial Risk Management",
       description: "Identifying and mitigating financial risks in your small business",
       thumbnailUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600&h=400",
       videoUrl: "https://example.com/video6",
@@ -75,7 +75,7 @@ const Lessons = () => {
     },
     {
       id: "7",
-      title: "Profit First Methodology",
+      title: "Day 7: Profit First Methodology",
       description: "Implementing the Profit First system in your business finances",
       thumbnailUrl: "https://images.unsplash.com/photo-1607863680198-23b434e6d8b4?auto=format&fit=crop&q=80&w=600&h=400",
       videoUrl: "https://example.com/video7",
@@ -84,7 +84,7 @@ const Lessons = () => {
     },
     {
       id: "8",
-      title: "Financial Forecasting for Small Businesses",
+      title: "Day 8: Financial Forecasting for Small Businesses",
       description: "How to create realistic financial projections for your business",
       thumbnailUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600&h=400",
       videoUrl: "https://example.com/video8",
@@ -93,7 +93,7 @@ const Lessons = () => {
     },
     {
       id: "9",
-      title: "Building Financial Resilience",
+      title: "Day 9: Building Financial Resilience",
       description: "Strategies to strengthen your business against economic downturns",
       thumbnailUrl: "https://images.unsplash.com/photo-1664575599736-c5197c684128?auto=format&fit=crop&q=80&w=600&h=400",
       videoUrl: "https://example.com/video9",
