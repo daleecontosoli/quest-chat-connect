@@ -89,7 +89,7 @@ const Circle = () => {
           
           <TabsContent value="team" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {users.filter(user => ['Frontend Developer', 'Backend Engineer', 'Full Stack Developer'].includes(user.role)).map((user) => (
+              {users.filter(user => user.id != 4).map((user) => (
                 <UserCard key={user.id} user={user} />
               ))}
             </div>
@@ -97,7 +97,7 @@ const Circle = () => {
           
           <TabsContent value="mentors" className="mt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {users.filter(user => ['Technical Lead', 'UX Designer'].includes(user.role)).map((user) => (
+              {users.filter(user => user.id == 4).map((user) => (
                 <UserCard key={user.id} user={user} />
               ))}
             </div>
