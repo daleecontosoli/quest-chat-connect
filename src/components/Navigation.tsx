@@ -42,7 +42,7 @@ const Navigation = () => {
 
   // Mock user data - in a real application, this would come from authentication
   const currentUser = {
-    name: "John Doe",
+    name: "Samir",
     avatarUrl: undefined
   };
 
