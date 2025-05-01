@@ -50,7 +50,7 @@ const Chat = () => {
     {
       id: 3,
       content: "How do I change the conversion from miles to dollars?",
-      sender: { name: "Samir", avatarUrl: undefined },
+      sender: { name: "Samir Patel", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 20),
       isCurrentUser: true,
       reactions: []
@@ -68,7 +68,7 @@ const Chat = () => {
     {
       id: 5,
       content: "Okay, that worked.  Screenshot:",
-      sender: { name: "Samir", avatarUrl: undefined },
+      sender: { name: "Samir Patel", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 27),
       isCurrentUser: true,
       imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500",
