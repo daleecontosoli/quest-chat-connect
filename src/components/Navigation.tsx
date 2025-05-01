@@ -14,7 +14,7 @@ const Navigation = () => {
       icon: <Award className="h-5 w-5" />
     },
     {
-      title: 'Chat',
+      title: 'Daily Challenges',
       path: '/chat',
       icon: <MessageSquare className="h-5 w-5" />
     },

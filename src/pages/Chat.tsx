@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import ChatMessage, { EmojiReaction } from '@/components/ChatMessage';
 import { Input } from '@/components/ui/input';
@@ -200,7 +201,7 @@ const Chat = () => {
   return (
     <div className="flex flex-col h-screen">
       <div className="p-4 border-b">
-        <h1 className="text-xl font-bold">Community Chat</h1>
+        <h1 className="text-xl font-bold">Daily Challenges</h1>
       </div>
       <div className="flex-1 overflow-y-auto p-4">
         <div className="max-w-3xl mx-auto">
