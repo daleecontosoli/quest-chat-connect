@@ -51,7 +51,7 @@ const Challenges = () => {
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">Quizes</h1>
         <p className="text-gray-500 dark:text-gray-400">
-          Complete Quizes to earn points and improve your skills
+          Complete Quizzes to earn points and improve your skills
         </p>
       </div>
 
