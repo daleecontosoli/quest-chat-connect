@@ -10,14 +10,14 @@ const Challenges = () => {
     { 
       id: 1, 
       title: "Electrical Fundamentals", 
-      description: "Test your knowledge of electrical basics including wiring and building code requirements.", 
+      description: "Test your knowledge of Electrical basics including wiring and building code requirements.", 
       points: 100, 
       difficulty: "easy" as const
     },
     { 
       id: 2, 
       title: "Plumbing Repair", 
-      description: "Test your skill on how to detection leaks and do repairs.", 
+      description: "Test your skill on how to detect leaks and do repairs.", 
       points: 200, 
       difficulty: "medium" as const 
     },
