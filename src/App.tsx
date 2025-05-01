@@ -12,6 +12,7 @@ import Chat from "./pages/Chat";
 import Social from "./pages/Social";
 import Resources from "./pages/Resources";
 import QA from "./pages/QA";
+import Circle from "./pages/Circle";
 import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <main className="flex-1 md:ml-64 pb-16 md:pb-0">
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/circle" element={<Circle />} />
               <Route path="/lessons" element={<Lessons />} />
               <Route path="/challenges" element={<Challenges />} />
               <Route path="/chat" element={<Chat />} />

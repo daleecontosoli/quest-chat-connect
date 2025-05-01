@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Award, MessageSquare, HelpCircle, Users, LinkIcon, Video } from 'lucide-react';
+import { Award, MessageSquare, HelpCircle, Users, LinkIcon, Video, UserRound } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import UserProfileNav from './UserProfileNav';
 
@@ -8,6 +9,11 @@ const Navigation = () => {
   const location = useLocation();
   
   const navItems = [
+    {
+      title: 'Your Circle',
+      path: '/circle',
+      icon: <UserRound className="h-5 w-5" />
+    },
     {
       title: 'Lessons',
       path: '/lessons',
