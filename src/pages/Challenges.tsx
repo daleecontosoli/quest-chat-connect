@@ -16,8 +16,8 @@ const Challenges = () => {
     },
     { 
       id: 2, 
-      title: "React Component Design", 
-      description: "Create efficient and reusable React components following best practices and patterns.", 
+      title: "Plumbing Repair", 
+      description: "Test your skill on how to detection leaks and repair.", 
       points: 200, 
       difficulty: "medium" as const 
     },
