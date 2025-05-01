@@ -27,7 +27,7 @@ const Chat = () => {
     {
       id: 1,
       content: "Hey everyone! Today's daily challenge is to track your mileage on your expense spreadsheet.  Post a screenshot to score 5 points!",
-      sender: { name: "Professor Potato", avatarUrl: undefined },
+      sender: { name: "Professor Potato", avatarUrl: "https://i.postimg.cc/tJpVNCjD/Chat-GPT-Image-Apr-30-2025-06-34-21-PM.png" },
       timestamp: new Date(2025, 4, 1, 9, 15),
       isCurrentUser: false,
       reactions: [
