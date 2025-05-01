@@ -14,12 +14,12 @@ const Navigation = () => {
       icon: <Video className="h-5 w-5" />
     },
     {
-      title: 'Challenges',
+      title: 'Quizes',
       path: '/challenges',
       icon: <Award className="h-5 w-5" />
     },
     {
-      title: 'Daily Challenge Chat',
+      title: 'Daily Challenge',
       path: '/chat',
       icon: <MessageSquare className="h-5 w-5" />
     },
