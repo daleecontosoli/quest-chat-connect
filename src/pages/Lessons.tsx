@@ -111,7 +111,7 @@ const Lessons = () => {
         <div className="mb-6">
           <h2 className="text-xl font-semibold mb-4 flex items-center">
             <Star className="mr-2 h-5 w-5 text-yellow-500" />
-            Today's Lesson
+            Today's Video
           </h2>
           <Card className="overflow-hidden transition-all hover:shadow-lg border-2 border-primary">
             <div className="relative">
