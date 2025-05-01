@@ -59,7 +59,6 @@ const Social = () => {
       sender: { name: "Samir Patel", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 15),
       isCurrentUser: true,
-      imageUrl: "https://images.unsplash.com/photo-1677442135136-760c813028c0?auto=format&fit=crop&w=800&h=500",
       reactions: [
         { emoji: '👍', count: 3, users: ['User1', 'User2', 'User3'] },
         { emoji: '🔥', count: 2, users: ['User4', 'User5'] }
