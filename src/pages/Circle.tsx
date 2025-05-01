@@ -21,7 +21,7 @@ const Circle = () => {
       role: 'General Handyman',
       bio: 'Passionate about UI/UX and creating responsive designs. Currently learning about accessibility.',
       avatarUrl: undefined,
-      skills: ['React', 'TypeScript', 'Tailwind CSS']
+      skills: ['Painting', 'Planting', 'General Handyman']
     },
     {
       id: '2',
@@ -29,7 +29,7 @@ const Circle = () => {
       role: 'Plumber',
       bio: 'Building scalable APIs and database solutions. Open source contributor.',
       avatarUrl: undefined,
-      skills: ['Node.js', 'PostgreSQL', 'GraphQL']
+      skills: ['Sinks', 'Bathrooms', 'Water Heaters']
     },
     {
       id: '3',
@@ -37,7 +37,7 @@ const Circle = () => {
       role: 'Rickshaw Driver Extraordinaire',
       bio: 'Experienced in building complete web applications. Love to experiment with new technologies.',
       avatarUrl: undefined,
-      skills: ['React', 'Express', 'MongoDB']
+      skills: ['Bajaj Auto', 'Piaggio', 'Mahindra']
     },
     {
       id: '4',
@@ -45,7 +45,7 @@ const Circle = () => {
       role: 'Circle Lead',
       bio: 'Guiding teams to build great products. Focused on architecture and best practices.',
       avatarUrl: 'https://i.postimg.cc/tJpVNCjD/Chat-GPT-Image-Apr-30-2025-06-34-21-PM.png',
-      skills: ['System Design', 'Team Leadership', 'Cloud Architecture']
+      skills: ['Finance', 'Discussion Lead', 'Sprouting']
     },
     {
       id: '5',
@@ -53,15 +53,15 @@ const Circle = () => {
       role: 'Kitchen Engineer',
       bio: 'Automating everything that can be automated. CI/CD pipeline expert.',
       avatarUrl: undefined,
-      skills: ['Docker', 'Kubernetes', 'Terraform']
+      skills: ['Sink', 'Remodeling', 'Cabinets']
     },
     {
       id: '6',
       name: 'Morgan Lee',
-      role: 'Roof Repair',
+      role: 'Roofer',
       bio: 'Creating intuitive and delightful user experiences. User research enthusiast.',
       avatarUrl: undefined,
-      skills: ['Figma', 'User Testing', 'Wireframing']
+      skills: ['Metal Roofs', 'Solar Install', 'Roof Repair']
     }
   ];
 
