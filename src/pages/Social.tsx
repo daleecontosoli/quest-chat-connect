@@ -26,7 +26,7 @@ const Social = () => {
     {
       id: 1,
       content: "Welcome to the Social chat! This is where we can discuss anything not related to challenges.",
-      sender: { name: "Professor Potato", avatarUrl: undefined },
+      sender: { name: "Professor Potato", avatarUrl: "https://i.postimg.cc/tJpVNCjD/Chat-GPT-Image-Apr-30-2025-06-34-21-PM.png" },
       timestamp: new Date(2025, 4, 1, 8, 30),
       isCurrentUser: false,
       reactions: [
