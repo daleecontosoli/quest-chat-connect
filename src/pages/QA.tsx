@@ -28,8 +28,8 @@ const QA = () => {
     },
     {
       id: 3,
-      title: "What are the best places to pick up in the metro area?",
-      content: "As my application grows, I'm finding it harder to manage state efficiently. Should I use Context API, Redux, or something else? What are the trade-offs?",
+      title: "How to optimize pickup locations?",
+      content: "I've been doing pretty well, but I want to optimize my pickup locations and times to maximize revenue. Any suggestions for how to do that?",
       author: { name: "Taylor Wilson", avatarUrl: undefined },
       timestamp: new Date(2025, 3, 30, 15, 45),
       answersCount: 8,
