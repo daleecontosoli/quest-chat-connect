@@ -75,7 +75,7 @@ const Circle = () => {
         <Tabs defaultValue="all" className="w-full">
           <TabsList className="mb-4">
             <TabsTrigger value="all">All Members</TabsTrigger>
-            <TabsTrigger value="team">Team</TabsTrigger>
+            <TabsTrigger value="team">Learners</TabsTrigger>
             <TabsTrigger value="mentors">Mentors</TabsTrigger>
           </TabsList>
           
