@@ -25,17 +25,18 @@ const Chat = () => {
   const initialMessages: Message[] = [
     {
       id: 1,
-      content: "Hey everyone! Has anyone completed the React Component Design challenge?",
-      sender: { name: "Alex Thompson", avatarUrl: undefined },
+      content: "Hey everyone! Today's daily challenge is to track your mileage on your expense spreadsheet.  Post a screenshot to score 5 points!",
+      sender: { name: "Professor Potato", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 15),
       isCurrentUser: false
     },
     {
       id: 2,
-      content: "I finished it yesterday. The key was to focus on component composition rather than inheritance.",
+      content: "Done!  I drove a lot today.",
       sender: { name: "Jamie Rodriguez", avatarUrl: undefined },
       timestamp: new Date(2025, 4, 1, 9, 18),
-      isCurrentUser: false
+      isCurrentUser: false,
+      imageUrl: "https://placehold.co/600x400"
     },
     {
       id: 3,
